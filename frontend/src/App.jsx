@@ -1,11 +1,20 @@
 import React from 'react'
 import { useState } from 'react'
+import axios from 'axios'
 
 function App() {
   const [newTodo, setNewTodo] = useState("");
 
    //function 
-   
+   const addTodo = async (e) =>{
+    e.preventDefualt();
+    if (!newTodo.trim()) return;
+    try {
+      const res  = await axios.post("/api/todos", {text: newTodo})
+    } catch (error) {
+      
+    }
+   }
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-400
