@@ -4,13 +4,16 @@ import axios from 'axios'
 
 function App() {
   const [newTodo, setNewTodo] = useState("");
-
+  const [todos, setTodos] = useState([]);
    //function 
    const addTodo = async (e) =>{
     e.preventDefualt();
     if (!newTodo.trim()) return;
     try {
       const res  = await axios.post("/api/todos", {text: newTodo})
+      setTodos([...todos,response.data])
+      setNewTodo('');
+      
     } catch (error) {
       
     }
