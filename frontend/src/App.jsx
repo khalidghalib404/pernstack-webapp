@@ -24,7 +24,7 @@ function App() {
     flex items-center  justify-center'>
       <div className='bg-white rounded-2xl shadow-xl w-full max-w-lg p-8'>
         
-                <h1 className='text-4xl font-bold text-grey-200 mb-6'>Task 24324ghfhgfhgjgu</h1>  
+                <h1 className='text-4xl font-bold text-grey-200 mb-6'>Task 243dfgfsdgs24ghfhgfhgjgu</h1>  
        
         <form  onSubmit={addTodo} className=' flex items-center gap-2 shadow-md shadow-sm border border-gray-200 p-2 rounded-lg'>
           <input className='flex-1 outline-none px-3 py-3 text-gray-700 placeholder-gray-400' type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} placeholder='what do you want to be done'
