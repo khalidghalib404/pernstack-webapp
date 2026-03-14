@@ -7,15 +7,15 @@ function App() {
   const [todos, setTodos] = useState([]);
    //function
    const addTodo = async (e) =>{
-    e.preventDefualt();
+    e.preventDefault();
     if (!newTodo.trim()) return;
     try {
       const res  = await axios.post("/api/todos", {text: newTodo})
-      setTodos([...todos,response.data])
+      setTodos([...todos,res.data])
       setNewTodo('');
 
     } catch (error) {
-     console.log("error adding todo:",error) 
+     console.log("error adding todo:",error)
     }
    }
   return (
