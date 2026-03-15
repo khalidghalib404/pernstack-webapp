@@ -58,7 +58,7 @@ function App() {
             {todos.length === 0 ? (
               <div className='text-center py-12 text-gray-400'>
                 <FiList className='text-6xl mx-auto mb-4 opacity-30' />
-                <p className='text-lg'>No tasks yet. Add one above!</p>
+                <p className='text-lg'>No tasks1 yet. Add one above!</p>
               </div>
             ) : (
               todos.map((todo) => (
